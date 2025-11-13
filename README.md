@@ -196,3 +196,22 @@ Napisz krótki program testujący.
 
 ---
 
+## Lekcja 5
+
+### Zadanie 1 – Rekord BookDTO
+Stwórz rekord `BookDTO`, który reprezentuje książkę w sklepie internetowym. Powinien zawierać takie informacje jak `title`, `author`, `price` i `yearOfPublication`. Następnie stwórz kilka instancji tego rekordu, reprezentujących różne książki.
+
+### Zadanie 2 – Rekordy Address i Person
+Utwórz rekord `Address`, który zawiera `street`, `houseNumber`, `postalCode` i `city`. Następnie, stwórz rekord `Person`, który oprócz podstawowych informacji o osobie (np. `firstName`, `lastName`) zawiera również pole typu `Address`. Stwórz przypadek testowy.
+
+### Zadanie 3 – Konwersja Klasy PointC i Rekordu PointR
+Stwórz klasę `PointC` reprezentującą punkt na płaszczyźnie 2D z polami `x` i `y`. Następnie, stwórz rekord `PointR` z tymi samymi polami. Dodaj metody umożliwiające konwersję z instancji klasy na rekord i odwrotnie. Stwórz przypadek testowy.
+
+### Zadanie 4 – Rekord Student i średnia ocen
+Stwórz rekord `Student`, który reprezentuje imię, nazwisko i listę ocen ucznia. Wprowadź metodę `averageGrades()`, która oblicza średnią ocen ucznia. Stwórz przypadek testowy.
+
+### Zadanie 5 – Rekord BankAccount i konstruktor
+Stwórz rekord `BankAccount`, który zawiera numer konta oraz saldo. Dodaj konstruktor, który pozwala na tworzenie konta tylko z numerem, przy czym domyślne saldo wynosi `0`. Stwórz przypadek testowy.
+
+### Zadanie 6 – Rekordy Order i Product
+Stwórz rekord `Order`, który zawiera listę produktów. Każdy produkt reprezentowany jest przez rekord `Product` z nazwą i ceną. W rekordzie `Order` dodaj metodę `totalValue()`, która oblicza łączną wartość zamówienia na podstawie cen produktów. Stwórz przypadek testowy.
