@@ -54,6 +54,22 @@
 - Zadanie 5 – Klasa Person i Comparator
 - Zadanie 6 – Klasa Song i wiele Comparatorów
 
+### Lekcja 8
+- Zadanie 1 – Klasa Teacher i Cloneable
+- Zadanie 2 – Klasa Athlete i klonowanie listy
+- Zadanie 3 – Interfejs MyComparator
+- Zadanie 4 – Interfejs MusicPlayer
+- Zadanie 5 – Interfejs Authentication
+- Zadanie 6 – Interfejs Sensor
+
+### Lekcja 9
+- Zadanie 1 – Wyjątek NiepoprawnyFormatDanychException
+- Zadanie 2 – Dzielenie i obsługa wyjątków
+- Zadanie 3 – Generyczna metoda isEqual
+- Zadanie 4 – Klasa generyczna Counter
+- Zadanie 5 – Klasa generyczna Triple
+- Zadanie 6 – Generyczna metoda max
+
 ---
 
 ## Lekcja 1
@@ -239,15 +255,15 @@ Stwórz listę tablicową odpowiednich 5 obiektów i wywołaj dla nich napisane 
 
 ### Zadanie 3 – Klasa Product i pakiety
 W jednym projekcie wykonaj następujące czynności:
-1.  Stwórz abstrakcyjną klasę `Product` zawierającą publiczną abstrakcyjną metodę `getPrice()`, która nie przyjmuje argumentów i zwraca `double`. Klasę umieść w pakiecie `store`.
-2.  Utwórz dwie klasy pochodne od `Product`: `Book` i `Clothing`. W obu klasach nadpisz metodę `getPrice()`. Dla `Book` niech zwraca cenę `29.99`, a dla `Clothing` niech zwraca cenę `59.99`.
-3.  W klasie `TestProduct` w pakiecie `store` utwórz tablicę typu `Product` i zainicjuj ją 5 instancjami `Book` i `Clothing`. Iteruj po tablicy wywołując metodę `getPrice()` dla każdego produktu (wyświetl ceny na standardowym wyjściu).
+1.  Stwórz abstrakcyjną klasę `Product` zawierającą publiczną abstrakcyjną metodę `getPrice()`, która nie przyjmuje argumentów i zwraca `double`. Klasę umieść w pakiecie `store`.
+2.  Utwórz dwie klasy pochodne od `Product`: `Book` i `Clothing`. W obu klasach nadpisz metodę `getPrice()`. Dla `Book` niech zwraca cenę `29.99`, a dla `Clothing` niech zwraca cenę `59.99`.
+3.  W klasie `TestProduct` w pakiecie `store` utwórz tablicę typu `Product` i zainicjuj ją 5 instancjami `Book` i `Clothing`. Iteruj po tablicy wywołując metodę `getPrice()` dla każdego produktu (wyświetl ceny na standardowym wyjściu).
 
 ### Zadanie 4 – Klasa Game i pakiety
 W jednym projekcie wykonaj następujące czynności:
-1.  Stwórz abstrakcyjną klasę `Game` zawierającą publiczną abstrakcyjną metodę `getRating()`, która nie przyjmuje argumentów i zwraca `double`. Klasę umieść w pakiecie `entertainment`.
-2.  Utwórz dwie klasy pochodne od `Game`: `StrategyGame` i `AdventureGame`. W obu klasach nadpisz metodę `getRating()`. Dla `StrategyGame` niech zwraca ocenę `8.5`, a dla `AdventureGame` niech zwraca ocenę `7.3`.
-3.  W klasie `TestGame` w pakiecie `entertainment` utwórz listę tablicową typu `Game` i zainicjalizuj ją 5 instancjami `StrategyGame` i `AdventureGame`. Iteruj po liście tablicowej wywołując metodę `getRating()` dla każdej gry (wyświetl oceny na standardowym wyjściu).
+1.  Stwórz abstrakcyjną klasę `Game` zawierającą publiczną abstrakcyjną metodę `getRating()`, która nie przyjmuje argumentów i zwraca `double`. Klasę umieść w pakiecie `entertainment`.
+2.  Utwórz dwie klasy pochodne od `Game`: `StrategyGame` i `AdventureGame`. W obu klasach nadpisz metodę `getRating()`. Dla `StrategyGame` niech zwraca ocenę `8.5`, a dla `AdventureGame` niech zwraca ocenę `7.3`.
+3.  W klasie `TestGame` w pakiecie `entertainment` utwórz listę tablicową typu `Game` i zainicjalizuj ją 5 instancjami `StrategyGame` i `AdventureGame`. Iteruj po liście tablicowej wywołując metodę `getRating()` dla każdej gry (wyświetl oceny na standardowym wyjściu).
 
 ---
 
@@ -271,23 +287,106 @@ Stwórz tablicę 4 obiektów klasy `Book` i posortuj ją według sprecyzowanego 
 ### Zadanie 4 – Klasa Product i Comparator
 Napisz klasę `Product` z polami `id` (typu `int`), `name` (typu `String`) oraz `price` (typu `double`).
 Zaimplementuj interfejs `Comparator` do porównywania obiektów:
-1.  Po polu `price` (od najniższej do najwyższej ceny),
-2.  W przypadku równości cen – po polu `id`.
+1.  Po polu `price` (od najniższej do najwyższej ceny),
+2.  W przypadku równości cen – po polu `id`.
 
 Stwórz listę 5 obiektów klasy `Product` i posortuj ją zgodnie z opisanym kryterium.
 
 ### Zadanie 5 – Klasa Person i Comparator
 Napisz klasę `Person` z polami `firstName` (typu `String`), `lastName` (typu `String`) oraz `birthDate` (typu `LocalDate`).
 Zaimplementuj generyczny interfejs `Comparator` do porównywania obiektów:
-1.  Po polu `lastName` (alfabetycznie od A do Z),
-2.  W przypadku równości nazwisk – po polu `firstName`.
+1.  Po polu `lastName` (alfabetycznie od A do Z),
+2.  W przypadku równości nazwisk – po polu `firstName`.
 
 Stwórz tablicę 5 obiektów klasy `Person` i posortuj ją zgodnie z opisanym kryterium.
 
 ### Zadanie 6 – Klasa Song i wiele Comparatorów
 Napisz klasę `Song` z polami `title` (typu `String`), `artist` (typu `String`) oraz `duration` (typu `int`).
 Zaimplementuj dwie klasy implementujące generyczny interfejs `Comparator`:
-1.  `DurationComparator` – do porównywania obiektów po polu `duration` (od najkrótszej do najdłuższej piosenki).
-2.  `ArtistTitleComparator` – do porównywania obiektów po polu `artist` (alfabetycznie od A do Z), a w przypadku równości po polu `title`.
+1.  `DurationComparator` – do porównywania obiektów po polu `duration` (od najkrótszej do najdłuższej piosenki).
+2.  `ArtistTitleComparator` – do porównywania obiektów po polu `artist` (alfabetycznie od A do Z), a w przypadku równości po polu `title`.
 
 Stwórz tablicę 5 obiektów klasy `Song` i posortuj ją, wykorzystując oba kryteria (najpierw sortowanie po długości utworu, a w przypadku tej samej długości – według artysty i tytułu).
+
+---
+
+## Lekcja 8
+
+### Zadanie 1 – Klasa Teacher i Cloneable
+Napisz klasę `Teacher` z trzema polami: `name` (String), `subject` (String) i `experience` (int).
+Zaimplementuj interfejs `Cloneable` i nadpisz metodę `clone()`, aby móc klonować obiekty tej klasy.
+W metodzie `main()` utwórz obiekt `Teacher`, sklonuj go, a następnie zmień doświadczenie (`experience`) oryginalnego nauczyciela.
+Wyświetl doświadczenie obu nauczycieli, aby zobaczyć, czy są niezależne.
+
+### Zadanie 2 – Klasa Athlete i klonowanie listy
+Napisz klasę `Athlete` z dwoma polami: `name` (String) i `lapTimes` (lista tablicowa zmiennych typu `int`, reprezentująca czas w sekundach potrzebny na przebiegnięcie okrążenia podczas różnych prób).
+Zaimplementuj interfejs `Cloneable` i nadpisz metodę `clone()`, aby móc klonować obiekty tej klasy.
+W metodzie `main()` utwórz obiekt `Athlete`, sklonuj go, a następnie zmień czas na pozycji 3 oryginalnego sportowca.
+Wyświetl czasy obu sportowców, aby zobaczyć, czy są niezależne (sprawdź działanie płytkiej i głębokiej kopii listy).
+
+### Zadanie 3 – Interfejs MyComparator
+Stwórz interfejs o nazwie `MyComparator`, który będzie zawierał metodę `compare(int a, int b): int`.
+Metoda ta powinna zwrócić:
+- `-1`, jeśli `a < b`,
+- `0`, jeśli `a == b`,
+- `1`, jeśli `a > b`.
+
+Następnie stwórz klasę `TestMyComparator`, która będzie implementować ten interfejs. W klasie tej zaimplementuj metodę `compare` zgodnie z jej opisem.
+
+### Zadanie 4 – Interfejs MusicPlayer
+Załóżmy, że mamy interfejs `MusicPlayer` z metodami `turnOn()`, `turnOff()` i `nextTrack()`.
+Stwórz klasę `Radio`, która będzie implementować ten interfejs.
+- W metodzie `turnOn()` powinien zostać wydrukowany komunikat `"Radio włączone"`.
+- W metodzie `turnOff()` – `"Radio wyłączone"`.
+- W `nextTrack()` – `"Zmieniono stację radiową"`.
+
+### Zadanie 5 – Interfejs Authentication
+Utwórz interfejs `Authentication` z trzema metodami abstrakcyjnymi:
+- `login(String username, String password)` zwracającą `boolean`,
+- `logout()` zwracającą `void`,
+- `resetPassword(String username, String oldPassword, String newPassword)` zwracającą `boolean`.
+
+Stwórz dwie klasy `UserAuthentication` i `AdminAuthentication`, które implementują ten interfejs.
+W klasie `AuthenticationTest` przetestuj implementacje metod dla obiektów obu klas.
+
+### Zadanie 6 – Interfejs Sensor
+Zaprojektuj interfejs `Sensor` z trzema metodami abstrakcyjnymi:
+- `readValue()` zwracającą `double`,
+- `getStatus()` zwracającą `String`,
+- `reset()` zwracającą `void`.
+
+Stwórz dwie klasy `TemperatureSensor` i `PressureSensor`, które implementują ten interfejs.
+W klasie `SensorTest` przetestuj działanie metod dla obiektów z obu klas.
+
+---
+
+## Lekcja 9
+
+### Zadanie 1 – Wyjątek NiepoprawnyFormatDanychException
+Zaprojektuj i zaimplementuj klasę wyjątku `NiepoprawnyFormatDanychException`, która będzie rozszerzać klasę `Exception`.
+Następnie napisz metodę `sprawdzFormatDanych(String dane)`, która rzuci wyjątek `NiepoprawnyFormatDanychException`, jeśli podany ciąg znaków nie odpowiada określonemu wzorcowi (np. nie jest adresem e-mail).
+W metodzie `main` przetestuj działanie tej metody, obsługując wyjątek i informując użytkownika o błędzie.
+
+### Zadanie 2 – Dzielenie i obsługa wyjątków
+Napisz program, który prosi użytkownika o wpisanie dwóch liczb, a następnie dzieli pierwszą liczbę przez drugą. Program powinien obsługiwać dwa rodzaje wyjątków:
+- `ArithmeticException` w przypadku dzielenia przez zero,
+- `InputMismatchException` gdy użytkownik wprowadzi coś innego niż liczby.
+
+W obu przypadkach należy wyświetlić stosowny komunikat błędu i poprosić użytkownika o ponowne wprowadzenie danych. Wykorzystaj typ `int`.
+
+### Zadanie 3 – Generyczna metoda isEqual
+Napisz generyczną metodę `isEqual`, która przyjmuje dwa dowolne obiekty tego samego typu i zwraca `true`, jeśli są one równe, w przeciwnym razie `false`.
+
+### Zadanie 4 – Klasa generyczna Counter
+Stwórz klasę generyczną `Counter<T>`, która będzie zliczać ilość dodanych elementów określonego typu.
+Klasa powinna mieć:
+- metodę `add(T element)`, która dodaje element do wewnętrznej struktury,
+- metodę `getCount()`, która zwraca liczbę dodanych elementów.
+
+### Zadanie 5 – Klasa generyczna Triple
+Stwórz klasę generyczną `Triple<T, U, V>`, która może przechowywać trzy obiekty różnych typów.
+Zaimplementuj metody `getFirst()`, `getSecond()` i `getThird()` do pobierania odpowiednio pierwszego, drugiego i trzeciego elementu.
+
+### Zadanie 6 – Generyczna metoda max
+Napisz generyczną metodę `max`, która przyjmuje tablicę elementów typu porównywalnego (implementujących interfejs `Comparable<T>`) i zwraca element o najwyższej wartości.
+Uwzględnij obsługę przypadku pustej tablicy.
