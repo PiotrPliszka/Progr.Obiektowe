@@ -23,7 +23,13 @@ public class Athlete implements Cloneable {
 
     @Override
     public Athlete clone() {
+        try {
+            Athlete clone = (Athlete) super.clone();
 
+            clone.lapTimes = new ArrayList<>(this.lapTimes);
+            return clone;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
         }
     }
 }
