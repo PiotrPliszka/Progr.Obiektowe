@@ -1,392 +1,163 @@
-# 📚 Programowanie Obiektowe – Zadania
+# ☕ Programowanie Obiektowe – Zadania
 
-## Spis treści
+![Java](https://img.shields.io/badge/Java-OOP-ED8B00?logo=openjdk&logoColor=white)
+![UWM](https://img.shields.io/badge/UWM-Coursework-4B8BBE)
+![Status](https://img.shields.io/badge/Status-Completed-2E8B57)
 
-### Lekcja 1
-- Zadanie 1 – Minimum
-- Zadanie 2 – Średnia
-- Zadanie 3 – Piramida znaków
-
-### Lekcja 2
-- Zadanie 1 – Klasa Book
-- Zadanie 2 – Klasa Square
-- Zadanie 3 – Klasa Point
-- Zadanie 4 – Klasa Car
-- Zadanie 5 – Klasa Time
-- Zadanie 6 – Klasa Dog
-- Zadanie 7 – Klasa Employee
-
-### Lekcja 3
-- Zadanie 1 – Klasa Person
-- Zadanie 2 – Klasa Vehicle
-- Zadanie 3 – Klasa Results
-- Zadanie 4 – Klasa Mathematics
-
-### Lekcja 4
-- Zadanie 1 – Klasa Person i Employee
-- Zadanie 2 – Klasa Tool i Hammer
-- Zadanie 3 – Pakiety i pola chronione
-- Zadanie 4 – Nadpisywanie metod i `super`
-- Zadanie 5 – Przeciążanie metod
-- Zadanie 6 – Metody statyczne
-- Zadanie 7 – Dziedziczenie konstruktorów
-- Zadanie 8 – Klasy Computer, Laptop i Desktop
-
-### Lekcja 5
-- Zadanie 1 – Rekord BookDTO
-- Zadanie 2 – Rekordy Address i Person
-- Zadanie 3 – Konwersja Klasy PointC i Rekordu PointR
-- Zadanie 4 – Rekord Student i średnia ocen
-- Zadanie 5 – Rekord BankAccount i konstruktor
-- Zadanie 6 – Rekordy Order i Product
-
-### Lekcja 6
-- Zadanie 1 – Klasa ComputerGraphic
-- Zadanie 2 – Klasa ElectronicDevice
-- Zadanie 3 – Klasa Product i pakiety
-- Zadanie 4 – Klasa Game i pakiety
-
-### Lekcja 7
-- Zadanie 1 – Klasa Employee i Comparable
-- Zadanie 2 – Klasa Client i Comparable
-- Zadanie 3 – Klasa Book i Comparable
-- Zadanie 4 – Klasa Product i Comparator
-- Zadanie 5 – Klasa Person i Comparator
-- Zadanie 6 – Klasa Song i wiele Comparatorów
-
-### Lekcja 8
-- Zadanie 1 – Klasa Teacher i Cloneable
-- Zadanie 2 – Klasa Athlete i klonowanie listy
-- Zadanie 3 – Interfejs MyComparator
-- Zadanie 4 – Interfejs MusicPlayer
-- Zadanie 5 – Interfejs Authentication
-- Zadanie 6 – Interfejs Sensor
-
-### Lekcja 9
-- Zadanie 1 – Wyjątek NiepoprawnyFormatDanychException
-- Zadanie 2 – Dzielenie i obsługa wyjątków
-- Zadanie 3 – Generyczna metoda isEqual
-- Zadanie 4 – Klasa generyczna Counter
-- Zadanie 5 – Klasa generyczna Triple
-- Zadanie 6 – Generyczna metoda max
+> Repozytorium zawiera rozwiązania zadań laboratoryjnych z przedmiotu **Programowanie Obiektowe** realizowanego na UWM.
+> Implementacje w Javie — od podstaw klas i dziedziczenia, przez rekordy i klasy abstrakcyjne, aż po interfejsy, generyki i obsługę wyjątków.
 
 ---
 
-## Lekcja 1
+## 📦 Zakres materiału
 
-### Zadanie 1 – Minimum
-Napisz metodę zwracającą najmniejszą liczbę z listy liczb całkowitych.
-
-### Zadanie 2 – Średnia
-Napisz metodę obliczającą średnią z listy liczb zmiennoprzecinkowych.
-Dla pustej listy zwróć `0`.
-
-### Zadanie 3 – Piramida znaków
-Program pobiera znak i liczbę `n`, a następnie tworzy piramidę tekstową o wysokości `n`.
-
----
-
-## Lekcja 2
-
-### Zadanie 1 – Klasa Book
-Napisz klasę `Book`, która zawiera pola: `title`, `author`, `publicationYear`.
-Dodaj dwa konstruktory:
-- domyślny (bez argumentów),
-- drugi, przyjmujący trzy argumenty o takich samych nazwach jak pola klasy.
-
-W konstruktorze z argumentami użyj słowa kluczowego `this`, aby przypisać wartości do pól.
-Sprawdź, czy przypisanie działa poprawnie w przypadku tworzenia obiektu.
-
-### Zadanie 2 – Klasa Square
-Zaprojektuj klasę `Square` z polem `side` i konstruktorem przyjmującym jego wartość.
-Dodaj drugi konstruktor bezargumentowy, który wywołuje pierwszy z wartością domyślną `1`.
-Dodaj metodę `getArea()`, która zwraca pole powierzchni kwadratu.
-
-### Zadanie 3 – Klasa Point
-Utwórz klasę `Point` z polami `x` i `y`, reprezentującymi współrzędne punktu.
-Dodaj metodę `distance(Point otherPoint)`, która oblicza odległość między bieżącym punktem a innym punktem.
-Stwórz przypadek testowy, w którym metoda zostanie wywołana co najmniej raz.
-
-### Zadanie 4 – Klasa Car
-Utwórz klasę `Car` z prywatną metodą `engineFailure()`.
-Spróbuj wywołać tę metodę z zewnątrz klasy i sprawdź, czy kompilator na to pozwoli.
-
-### Zadanie 5 – Klasa Time
-Stwórz klasę `Time` z polami `hours` i `minutes`.
-Dodaj metodę `addTime(Time otherTime)`, która dodaje czas z innego obiektu i zwraca nowy obiekt `Time`.
-Zadbaj o to, aby:
-- minuty nie przekraczały `59`,
-- godziny nie przekraczały `23`.
-
-Przygotuj przypadek testowy, w którym metoda zostanie wywołana.
-
-### Zadanie 6 – Klasa Dog
-Utwórz klasę `Dog` z polami `name`, `breed` i `age`.
-Dodaj dwa konstruktory:
-- pierwszy przyjmujący wszystkie trzy argumenty,
-- drugi przyjmujący tylko `name` i `breed`, który wywołuje pierwszy konstruktor z domyślnym wiekiem `1`.
-
-### Zadanie 7 – Klasa Employee
-Utwórz klasę `Employee` z prywatnymi polami: `firstName`, `lastName`, `position`, `age`, `salary`.
-Dodaj konstruktor przyjmujący wszystkie pola, gettery i settery.
-Dodaj metodę `showInformation()`, która wypisuje informacje o pracowniku.
+| Lekcja | Temat |
+|--------|-------|
+| Lekcja 1 | Wprowadzenie — metody, pętle, operacje na danych |
+| Lekcja 2 | Klasy, konstruktory, pola prywatne, `this` |
+| Lekcja 3 | `toString()`, `equals()`, `hashCode()`, walidacja danych |
+| Lekcja 4 | Dziedziczenie, `super`, pakiety, metody statyczne |
+| Lekcja 5 | Rekordy (`record`) — DTO, zagnieżdżone rekordy, konstruktory |
+| Lekcja 6 | Klasy abstrakcyjne, polimorfizm, pakiety |
+| Lekcja 7 | `Comparable`, `Comparator`, sortowanie obiektów |
+| Lekcja 8 | `Cloneable`, interfejsy własne i wbudowane |
+| Lekcja 9 | Wyjątki, generyki (`<T>`, `<T,U,V>`, `Comparable<T>`) |
 
 ---
 
-## Lekcja 3
+## 📁 Struktura repozytorium
 
-### Zadanie 1 – Klasa Person
-Zdefiniuj klasę `Person` z polami `firstName`, `lastName` i `age`.
-Konstruktor przyjmuje trzy argumenty i waliduje dane:
-- `age` nie może być ujemny (w przeciwnym razie ustaw `0`),
-- `firstName` i `lastName` nie mogą być `null` ani puste (w przeciwnym razie ustaw pusty napis).
-
-Dodaj metody:
-- `toString()` – zwraca `"Person: [firstName] [lastName], Age: [age]."`,
-- `equals()` i `hashCode()` – porównują obiekty na podstawie wszystkich pól.
-
-### Zadanie 2 – Klasa Vehicle
-Zdefiniuj klasę `Vehicle` z polami `brand`, `model` i `yearOfProduction`.
-Konstruktor waliduje dane:
-- `yearOfProduction` nie może być większy niż aktualny rok (w przeciwnym razie ustaw aktualny rok),
-- `brand` i `model` nie mogą być `null` ani puste (w przeciwnym razie ustaw pusty napis).
-
-Dodaj metody:
-- `toString()` – `"Vehicle: [brand] [model], Year: [yearOfProduction]."`,
-- `equals()` i `hashCode()` – porównują obiekty po wszystkich polach.
-
-### Zadanie 3 – Klasa Results
-Stwórz klasę `Results` z prywatnymi polami `firstName`, `lastName` i tablicą `results` (typ `int[]`).
-Konstruktor przyjmuje imię, nazwisko i rozmiar tablicy.
-Dodaj:
-- gettery i settery,
-- metodę `addResult(int index, int result)`,
-- metodę `averageResult()` – zwracającą średnią z wyników.
-
-Metody:
-- `toString()` – `"Results for [firstName] [lastName]: Average Score = [average], Results: [r1, r2, ...]."`,
-- `equals()` i `hashCode()` – porównują wszystkie pola i zawartość tablicy.
-
-### Zadanie 4 – Klasa Mathematics
-Stwórz klasę `Mathematics` z polem statycznym `PI`, przechowującym przybliżoną wartość liczby π.
-Pole powinno być **niemodyfikowalne** (`final`).
-Przygotuj prosty przypadek testowy demonstrujący użycie tego pola.
+```text
+Progr.Obiektowe/
+├── Lekcja 1/
+├── Lekcja 2/
+├── Lekcja 3/
+├── Lekcja 4/
+├── Lekcja 5/
+├── Lekcja 6/
+├── Lekcja 7/
+├── Lekcja 8/
+├── Lekcja 9/
+└── Przygotowania do Kolokwium/
+```
 
 ---
 
-## Lekcja 4
+## 📝 Szczegółowy spis zadań
 
-### Zadanie 1 – Klasa Person i Employee
-Utwórz klasę `Person` z prywatnym polem `firstName` i chronionym `lastName`.
-Klasa `Employee` dziedziczy po `Person`. Sprawdź dostępność pól i dodaj gettery.
-W metodzie `displayData()` wypisz dane pracownika przez gettery.
+### Lekcja 1 – Wprowadzenie
 
-### Zadanie 2 – Klasa Tool i Hammer
-Stwórz klasę `Tool` z chronionym konstruktorem przyjmującym nazwę.
-Klasa `Hammer` dziedziczy po `Tool` i wywołuje konstruktor bazowy przez `super()`.
-Zastanów się, dlaczego konstruktor `private` uniemożliwiłby dziedziczenie.
+Podstawowe metody, pętle i operacje na danych.
 
-### Zadanie 3 – Pakiety i pola chronione
-Utwórz pakiety `animals` i `mammals`.
-W `animals` – klasa `Animal` z polem chronionym `species` i prywatnym `age`.
-W `mammals` – klasa `Dog` dziedziczy po `Animal`.
-Sprawdź, które pola są dostępne w klasie z innego pakietu.
-
-### Zadanie 4 – Nadpisywanie metod i `super`
-Klasa `Vehicle` z metodą `drive()` wypisującą „The vehicle is moving.”
-Klasa `Car` nadpisuje metodę, a następnie wywołuje oryginał przez `super.drive()`.
-
-### Zadanie 5 – Przeciążanie metod
-Klasa `Calculator` z metodą `add(int, int)`.
-Klasa `ExtendedCalculator` ma metodę `add(int, int, int)`.
-Zastanów się, czy to nadpisanie, czy przeciążenie metody.
-
-### Zadanie 6 – Metody statyczne
-Klasa `Base` ma statyczną metodę `info()`.
-Klasa `Child` definiuje metodę `info()` o tej samej nazwie.
-Porównaj zachowanie i wyjaśnij różnicę między ukrywaniem a nadpisywaniem metod statycznych.
-
-### Zadanie 7 – Dziedziczenie konstruktorów
-Klasa `Animal` z polem `name` i konstruktorem ustawiającym wartość „Unknown”.
-Klasa `Dog` dziedziczy po `Animal` bez własnego konstruktora.
-Sprawdź wynik przy tworzeniu nowego obiektu i użyciu `getClass().getName()`.
-
-### Zadanie 8 – Klasy Computer, Laptop i Desktop
-Klasa `Computer` z polami `manufacturer`, `model`, `partsPrices`.
-Klasy `Laptop` (pole `weight`) i `Desktop` (pole `caseType`) dziedziczą po `Computer`.
-Dodaj konstruktory, gettery/settery oraz metody `toString()`, `equals()` i `hashCode()`.
-Napisz krótki program testujący.
+- Zadanie 1 – Metoda zwracająca minimum z listy liczb całkowitych
+- Zadanie 2 – Metoda obliczająca średnią z listy liczb zmiennoprzecinkowych
+- Zadanie 3 – Piramida znaków na podstawie wejścia użytkownika
 
 ---
 
-## Lekcja 5
+### Lekcja 2 – Klasy i Konstruktory
 
-### Zadanie 1 – Rekord BookDTO
-Stwórz rekord `BookDTO`, który reprezentuje książkę w sklepie internetowym. Powinien zawierać takie informacje jak `title`, `author`, `price` i `yearOfPublication`. Następnie stwórz kilka instancji tego rekordu, reprezentujących różne książki.
+Projektowanie klas z polami, konstruktorami i metodami.
 
-### Zadanie 2 – Rekordy Address i Person
-Utwórz rekord `Address`, który zawiera `street`, `houseNumber`, `postalCode` i `city`. Następnie, stwórz rekord `Person`, który oprócz podstawowych informacji o osobie (np. `firstName`, `lastName`) zawiera również pole typu `Address`. Stwórz przypadek testowy.
-
-### Zadanie 3 – Konwersja Klasy PointC i Rekordu PointR
-Stwórz klasę `PointC` reprezentującą punkt na płaszczyźnie 2D z polami `x` i `y`. Następnie, stwórz rekord `PointR` z tymi samymi polami. Dodaj metody umożliwiające konwersję z instancji klasy na rekord i odwrotnie. Stwórz przypadek testowy.
-
-### Zadanie 4 – Rekord Student i średnia ocen
-Stwórz rekord `Student`, który reprezentuje imię, nazwisko i listę ocen ucznia. Wprowadź metodę `averageGrades()`, która oblicza średnią ocen ucznia. Stwórz przypadek testowy.
-
-### Zadanie 5 – Rekord BankAccount i konstruktor
-Stwórz rekord `BankAccount`, który zawiera numer konta oraz saldo. Dodaj konstruktor, który pozwala na tworzenie konta tylko z numerem, przy czym domyślne saldo wynosi `0`. Stwórz przypadek testowy.
-
-### Zadanie 6 – Rekordy Order i Product
-Stwórz rekord `Order`, który zawiera listę produktów. Każdy produkt reprezentowany jest przez rekord `Product` z nazwą i ceną. W rekordzie `Order` dodaj metodę `totalValue()`, która oblicza łączną wartość zamówienia na podstawie cen produktów. Stwórz przypadek testowy.
+- Zadanie 1 – `Book` — dwa konstruktory, słowo kluczowe `this`
+- Zadanie 2 – `Square` — konstruktor bezargumentowy wywołujący drugi przez `this()`
+- Zadanie 3 – `Point` — metoda `distance(Point other)`
+- Zadanie 4 – `Car` — prywatna metoda, weryfikacja dostępu z zewnątrz
+- Zadanie 5 – `Time` — dodawanie czasu z kontrolą zakresu (minuty ≤ 59, godziny ≤ 23)
+- Zadanie 6 – `Dog` — konstruktor z domyślnym wiekiem przez `this()`
+- Zadanie 7 – `Employee` — pola prywatne, gettery/settery, `showInformation()`
 
 ---
 
-## Lekcja 6
+### Lekcja 3 – `toString`, `equals`, `hashCode`
 
-### Zadanie 1 – Klasa ComputerGraphic
-Zdefiniuj abstrakcyjną klasę `ComputerGraphic` z polami `width`, `height` (typu `int`) oraz `fileName` (typu `String`). Dodaj abstrakcyjne metody `loadFile()` i `saveFile()`.
-Następnie zdefiniuj klasy `Bitmap` i `Vector`, które dziedziczą po klasie `ComputerGraphic` i implementują metody `loadFile()` oraz `saveFile()`.
-Stwórz listę tablicową odpowiednich 5 obiektów i wywołaj dla nich napisane metody.
+Poprawne nadpisywanie metod bazowych i walidacja danych w konstruktorach.
 
-### Zadanie 2 – Klasa ElectronicDevice
-Zdefiniuj abstrakcyjną klasę `ElectronicDevice` z polami `manufacturer` (typu `String`), `model` (typu `String`) oraz `productionYear` (typu `int`). Dodaj abstrakcyjne metody `turnOn()` i `turnOff()`.
-Następnie zdefiniuj klasy `Smartphone`, `Television` i `Laptop`, które dziedziczą po klasie `ElectronicDevice` i implementują metody `turnOn()` oraz `turnOff()`.
-Stwórz listę tablicową odpowiednich 5 obiektów i wywołaj dla nich napisane metody.
-
-### Zadanie 3 – Klasa Product i pakiety
-W jednym projekcie wykonaj następujące czynności:
-1.  Stwórz abstrakcyjną klasę `Product` zawierającą publiczną abstrakcyjną metodę `getPrice()`, która nie przyjmuje argumentów i zwraca `double`. Klasę umieść w pakiecie `store`.
-2.  Utwórz dwie klasy pochodne od `Product`: `Book` i `Clothing`. W obu klasach nadpisz metodę `getPrice()`. Dla `Book` niech zwraca cenę `29.99`, a dla `Clothing` niech zwraca cenę `59.99`.
-3.  W klasie `TestProduct` w pakiecie `store` utwórz tablicę typu `Product` i zainicjuj ją 5 instancjami `Book` i `Clothing`. Iteruj po tablicy wywołując metodę `getPrice()` dla każdego produktu (wyświetl ceny na standardowym wyjściu).
-
-### Zadanie 4 – Klasa Game i pakiety
-W jednym projekcie wykonaj następujące czynności:
-1.  Stwórz abstrakcyjną klasę `Game` zawierającą publiczną abstrakcyjną metodę `getRating()`, która nie przyjmuje argumentów i zwraca `double`. Klasę umieść w pakiecie `entertainment`.
-2.  Utwórz dwie klasy pochodne od `Game`: `StrategyGame` i `AdventureGame`. W obu klasach nadpisz metodę `getRating()`. Dla `StrategyGame` niech zwraca ocenę `8.5`, a dla `AdventureGame` niech zwraca ocenę `7.3`.
-3.  W klasie `TestGame` w pakiecie `entertainment` utwórz listę tablicową typu `Game` i zainicjalizuj ją 5 instancjami `StrategyGame` i `AdventureGame`. Iteruj po liście tablicowej wywołując metodę `getRating()` dla każdej gry (wyświetl oceny na standardowym wyjściu).
+- Zadanie 1 – `Person` — walidacja wieku i imion, `equals` i `hashCode`
+- Zadanie 2 – `Vehicle` — walidacja roku produkcji względem bieżącego roku
+- Zadanie 3 – `Results` — tablica wyników, `averageResult()`, `equals` i `hashCode` z porównaniem tablic
+- Zadanie 4 – `Mathematics` — pole statyczne `final PI`
 
 ---
 
-## Lekcja 7
+### Lekcja 4 – Dziedziczenie
 
-### Zadanie 1 – Klasa Employee i Comparable
-Napisz klasę `Employee`, która zawiera pola: `name` (typu `String`), `salary` (typu `double`) i `employmentDate` (typu `LocalDate`).
-Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy `Employee` były sortowane **rosnąco według pensji**.
-Stwórz listę tablicową (`ArrayList`) 5 obiektów klasy `Employee` i posortuj ją według sprecyzowanego kryterium.
+Modyfikatory dostępu, `super`, pakiety, nadpisywanie i ukrywanie metod.
 
-### Zadanie 2 – Klasa Client i Comparable
-Napisz klasę `Client`, która zawiera pola: `name` (typu `String`), `clientNumber` (typu `int`) i `lastLogin` (typu `Date` - `java.util.Date`).
-Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy `Client` były sortowane **malejąco według daty ostatniego logowania**.
-Stwórz listę tablicową 5 obiektów klasy `Client` i posortuj ją według sprecyzowanego kryterium.
-
-### Zadanie 3 – Klasa Book i Comparable
-Napisz klasę `Book`, która zawiera pola: `title` (typu `String`), `numberOfPages` (typu `int`) i `publicationDate` (typu `LocalDate`).
-Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy `Book` były sortowane **malejąco według liczby stron**.
-Stwórz tablicę 4 obiektów klasy `Book` i posortuj ją według sprecyzowanego kryterium.
-
-### Zadanie 4 – Klasa Product i Comparator
-Napisz klasę `Product` z polami `id` (typu `int`), `name` (typu `String`) oraz `price` (typu `double`).
-Zaimplementuj interfejs `Comparator` do porównywania obiektów:
-1.  Po polu `price` (od najniższej do najwyższej ceny),
-2.  W przypadku równości cen – po polu `id`.
-
-Stwórz listę 5 obiektów klasy `Product` i posortuj ją zgodnie z opisanym kryterium.
-
-### Zadanie 5 – Klasa Person i Comparator
-Napisz klasę `Person` z polami `firstName` (typu `String`), `lastName` (typu `String`) oraz `birthDate` (typu `LocalDate`).
-Zaimplementuj generyczny interfejs `Comparator` do porównywania obiektów:
-1.  Po polu `lastName` (alfabetycznie od A do Z),
-2.  W przypadku równości nazwisk – po polu `firstName`.
-
-Stwórz tablicę 5 obiektów klasy `Person` i posortuj ją zgodnie z opisanym kryterium.
-
-### Zadanie 6 – Klasa Song i wiele Comparatorów
-Napisz klasę `Song` z polami `title` (typu `String`), `artist` (typu `String`) oraz `duration` (typu `int`).
-Zaimplementuj dwie klasy implementujące generyczny interfejs `Comparator`:
-1.  `DurationComparator` – do porównywania obiektów po polu `duration` (od najkrótszej do najdłuższej piosenki).
-2.  `ArtistTitleComparator` – do porównywania obiektów po polu `artist` (alfabetycznie od A do Z), a w przypadku równości po polu `title`.
-
-Stwórz tablicę 5 obiektów klasy `Song` i posortuj ją, wykorzystując oba kryteria (najpierw sortowanie po długości utworu, a w przypadku tej samej długości – według artysty i tytułu).
+- Zadanie 1 – `Person` i `Employee` — pola `private` vs `protected`, gettery
+- Zadanie 2 – `Tool` i `Hammer` — chroniony konstruktor, wywołanie `super()`
+- Zadanie 3 – Pakiety `animals` i `mammals` — dostępność pól chronionych między pakietami
+- Zadanie 4 – `Vehicle` i `Car` — nadpisywanie metody, `super.drive()`
+- Zadanie 5 – `Calculator` i `ExtendedCalculator` — przeciążanie vs nadpisywanie
+- Zadanie 6 – `Base` i `Child` — ukrywanie metod statycznych vs ich nadpisywanie
+- Zadanie 7 – `Animal` i `Dog` — dziedziczenie konstruktorów, `getClass().getName()`
+- Zadanie 8 – `Computer`, `Laptop`, `Desktop` — hierarchia klas, `toString`, `equals`, `hashCode`
 
 ---
 
-## Lekcja 8
+### Lekcja 5 – Rekordy (`record`)
 
-### Zadanie 1 – Klasa Teacher i Cloneable
-Napisz klasę `Teacher` z trzema polami: `name` (String), `subject` (String) i `experience` (int).
-Zaimplementuj interfejs `Cloneable` i nadpisz metodę `clone()`, aby móc klonować obiekty tej klasy.
-W metodzie `main()` utwórz obiekt `Teacher`, sklonuj go, a następnie zmień doświadczenie (`experience`) oryginalnego nauczyciela.
-Wyświetl doświadczenie obu nauczycieli, aby zobaczyć, czy są niezależne.
+Niemutowalne struktury danych, konwersje między klasą a rekordem.
 
-### Zadanie 2 – Klasa Athlete i klonowanie listy
-Napisz klasę `Athlete` z dwoma polami: `name` (String) i `lapTimes` (lista tablicowa zmiennych typu `int`, reprezentująca czas w sekundach potrzebny na przebiegnięcie okrążenia podczas różnych prób).
-Zaimplementuj interfejs `Cloneable` i nadpisz metodę `clone()`, aby móc klonować obiekty tej klasy.
-W metodzie `main()` utwórz obiekt `Athlete`, sklonuj go, a następnie zmień czas na pozycji 3 oryginalnego sportowca.
-Wyświetl czasy obu sportowców, aby zobaczyć, czy są niezależne (sprawdź działanie płytkiej i głębokiej kopii listy).
-
-### Zadanie 3 – Interfejs MyComparator
-Stwórz interfejs o nazwie `MyComparator`, który będzie zawierał metodę `compare(int a, int b): int`.
-Metoda ta powinna zwrócić:
-- `-1`, jeśli `a < b`,
-- `0`, jeśli `a == b`,
-- `1`, jeśli `a > b`.
-
-Następnie stwórz klasę `TestMyComparator`, która będzie implementować ten interfejs. W klasie tej zaimplementuj metodę `compare` zgodnie z jej opisem.
-
-### Zadanie 4 – Interfejs MusicPlayer
-Załóżmy, że mamy interfejs `MusicPlayer` z metodami `turnOn()`, `turnOff()` i `nextTrack()`.
-Stwórz klasę `Radio`, która będzie implementować ten interfejs.
-- W metodzie `turnOn()` powinien zostać wydrukowany komunikat `"Radio włączone"`.
-- W metodzie `turnOff()` – `"Radio wyłączone"`.
-- W `nextTrack()` – `"Zmieniono stację radiową"`.
-
-### Zadanie 5 – Interfejs Authentication
-Utwórz interfejs `Authentication` z trzema metodami abstrakcyjnymi:
-- `login(String username, String password)` zwracającą `boolean`,
-- `logout()` zwracającą `void`,
-- `resetPassword(String username, String oldPassword, String newPassword)` zwracającą `boolean`.
-
-Stwórz dwie klasy `UserAuthentication` i `AdminAuthentication`, które implementują ten interfejs.
-W klasie `AuthenticationTest` przetestuj implementacje metod dla obiektów obu klas.
-
-### Zadanie 6 – Interfejs Sensor
-Zaprojektuj interfejs `Sensor` z trzema metodami abstrakcyjnymi:
-- `readValue()` zwracającą `double`,
-- `getStatus()` zwracającą `String`,
-- `reset()` zwracającą `void`.
-
-Stwórz dwie klasy `TemperatureSensor` i `PressureSensor`, które implementują ten interfejs.
-W klasie `SensorTest` przetestuj działanie metod dla obiektów z obu klas.
+- Zadanie 1 – `BookDTO` — podstawowy rekord z polami `title`, `author`, `price`, `yearOfPublication`
+- Zadanie 2 – `Address` i `Person` — zagnieżdżone rekordy
+- Zadanie 3 – `PointC` (klasa) i `PointR` (rekord) — metody konwersji w obu kierunkach
+- Zadanie 4 – `Student` — rekord z metodą `averageGrades()`
+- Zadanie 5 – `BankAccount` — rekord z konstruktorem ustawiającym domyślne saldo `0`
+- Zadanie 6 – `Order` i `Product` — zagnieżdżone rekordy, metoda `totalValue()`
 
 ---
 
-## Lekcja 9
+### Lekcja 6 – Klasy Abstrakcyjne
 
-### Zadanie 1 – Wyjątek NiepoprawnyFormatDanychException
-Zaprojektuj i zaimplementuj klasę wyjątku `NiepoprawnyFormatDanychException`, która będzie rozszerzać klasę `Exception`.
-Następnie napisz metodę `sprawdzFormatDanych(String dane)`, która rzuci wyjątek `NiepoprawnyFormatDanychException`, jeśli podany ciąg znaków nie odpowiada określonemu wzorcowi (np. nie jest adresem e-mail).
-W metodzie `main` przetestuj działanie tej metody, obsługując wyjątek i informując użytkownika o błędzie.
+Polimorfizm, klasy abstrakcyjne, pakiety.
 
-### Zadanie 2 – Dzielenie i obsługa wyjątków
-Napisz program, który prosi użytkownika o wpisanie dwóch liczb, a następnie dzieli pierwszą liczbę przez drugą. Program powinien obsługiwać dwa rodzaje wyjątków:
-- `ArithmeticException` w przypadku dzielenia przez zero,
-- `InputMismatchException` gdy użytkownik wprowadzi coś innego niż liczby.
+- Zadanie 1 – `ComputerGraphic` → `Bitmap`, `Vector` — `loadFile()`, `saveFile()`
+- Zadanie 2 – `ElectronicDevice` → `Smartphone`, `Television`, `Laptop` — `turnOn()`, `turnOff()`
+- Zadanie 3 – `Product` → `Book`, `Clothing` — pakiet `store`, `getPrice()`, iteracja przez tablicę
+- Zadanie 4 – `Game` → `StrategyGame`, `AdventureGame` — pakiet `entertainment`, `getRating()`
 
-W obu przypadkach należy wyświetlić stosowny komunikat błędu i poprosić użytkownika o ponowne wprowadzenie danych. Wykorzystaj typ `int`.
+---
 
-### Zadanie 3 – Generyczna metoda isEqual
-Napisz generyczną metodę `isEqual`, która przyjmuje dwa dowolne obiekty tego samego typu i zwraca `true`, jeśli są one równe, w przeciwnym razie `false`.
+### Lekcja 7 – `Comparable` i `Comparator`
 
-### Zadanie 4 – Klasa generyczna Counter
-Stwórz klasę generyczną `Counter<T>`, która będzie zliczać ilość dodanych elementów określonego typu.
-Klasa powinna mieć:
-- metodę `add(T element)`, która dodaje element do wewnętrznej struktury,
-- metodę `getCount()`, która zwraca liczbę dodanych elementów.
+Sortowanie obiektów według własnych kryteriów.
 
-### Zadanie 5 – Klasa generyczna Triple
-Stwórz klasę generyczną `Triple<T, U, V>`, która może przechowywać trzy obiekty różnych typów.
-Zaimplementuj metody `getFirst()`, `getSecond()` i `getThird()` do pobierania odpowiednio pierwszego, drugiego i trzeciego elementu.
+- Zadanie 1 – `Employee` + `Comparable` — sortowanie rosnąco po pensji
+- Zadanie 2 – `Client` + `Comparable` — sortowanie malejąco po dacie ostatniego logowania
+- Zadanie 3 – `Book` + `Comparable` — sortowanie malejąco po liczbie stron
+- Zadanie 4 – `Product` + `Comparator` — sortowanie po cenie, przy równości po `id`
+- Zadanie 5 – `Person` + `Comparator` — sortowanie po nazwisku, przy równości po imieniu
+- Zadanie 6 – `Song` — dwa Comparatory: `DurationComparator` i `ArtistTitleComparator`
 
-### Zadanie 6 – Generyczna metoda max
-Napisz generyczną metodę `max`, która przyjmuje tablicę elementów typu porównywalnego (implementujących interfejs `Comparable<T>`) i zwraca element o najwyższej wartości.
-Uwzględnij obsługę przypadku pustej tablicy.
+---
+
+### Lekcja 8 – Interfejsy i `Cloneable`
+
+Implementacja interfejsów wbudowanych i własnych, płytka vs głęboka kopia.
+
+- Zadanie 1 – `Teacher` + `Cloneable` — klonowanie obiektu, weryfikacja niezależności kopii
+- Zadanie 2 – `Athlete` + `Cloneable` — klonowanie listy `lapTimes`, płytka vs głęboka kopia
+- Zadanie 3 – Własny interfejs `MyComparator` z metodą `compare(int a, int b): int`
+- Zadanie 4 – Interfejs `MusicPlayer` → klasa `Radio`
+- Zadanie 5 – Interfejs `Authentication` → `UserAuthentication`, `AdminAuthentication`
+- Zadanie 6 – Interfejs `Sensor` → `TemperatureSensor`, `PressureSensor`
+
+---
+
+### Lekcja 9 – Wyjątki i Generyki
+
+Własne wyjątki, obsługa błędów wejścia, klasy i metody generyczne.
+
+- Zadanie 1 – Własny wyjątek `NiepoprawnyFormatDanychException`, walidacja formatu e-mail
+- Zadanie 2 – Obsługa `ArithmeticException` i `InputMismatchException` przy dzieleniu
+- Zadanie 3 – Generyczna metoda `isEqual<T>(T a, T b): boolean`
+- Zadanie 4 – Generyczna klasa `Counter<T>` z metodami `add()` i `getCount()`
+- Zadanie 5 – Generyczna klasa `Triple<T, U, V>` przechowująca trzy obiekty różnych typów
+- Zadanie 6 – Generyczna metoda `max<T extends Comparable<T>>(T[] arr)` z obsługą pustej tablicy
+
+---
+
+## 👤 Autor
+
+**Piotr Pliszka** — [GitHub](https://github.com/PiotrPliszka)
